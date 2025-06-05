@@ -12,7 +12,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    /* existing styles retained */
     .testimonials {
       background: #f9f9f9;
       padding: 2rem;
@@ -48,32 +47,135 @@
       cursor: pointer;
       z-index: 1000;
     }
+    .certifications, .brochures, .use-cases, .coverage, .newsletter {
+      margin: 3rem 0;
+      padding: 2rem;
+      border-radius: 12px;
+      background: #f1f1f1;
+    }
+    .certifications img, .coverage img {
+      height: 40px;
+      margin: 10px;
+    }
+    .floating-chat {
+      position: fixed;
+      bottom: 140px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
+    }
+    .floating-chat iframe {
+      flex-grow: 1;
+      border: none;
+      border-radius: 12px;
+    }
+    .floating-chat-header {
+      background: #007BFF;
+      color: white;
+      padding: 0.5rem;
+      text-align: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- existing content -->
 
+    <section class="certifications" data-aos="fade-up">
+      <h2>Our Certifications</h2>
+      <p>We take quality and compliance seriously. Our products are certified by national and international authorities.</p>
+      <img src="images/fssai.png" alt="FSSAI">
+      <img src="images/usda.png" alt="USDA Organic">
+      <img src="images/apeda.png" alt="APEDA">
+      <img src="images/iso.png" alt="ISO">
+    </section>
+
+    <section class="brochures" data-aos="fade-up">
+      <h2>Download Our Catalogs</h2>
+      <ul>
+        <li><a href="downloads/company-profile.pdf" target="_blank">Company Profile (PDF)</a></li>
+        <li><a href="downloads/product-catalog.pdf" target="_blank">Product Catalog</a></li>
+        <li><a href="downloads/nutrition-guide.pdf" target="_blank">Nutrition Guide</a></li>
+      </ul>
+    </section>
+
+    <section class="use-cases" data-aos="fade-up">
+      <h2>Who We Serve</h2>
+      <ul>
+        <li>🏪 <strong>Retailers:</strong> Shelf-ready packs with private label options</li>
+        <li>🍽️ <strong>Restaurants:</strong> Premium bulk quantities with assured freshness</li>
+        <li>🏢 <strong>Distributors:</strong> Wide range of SKUs and scalable sourcing</li>
+      </ul>
+    </section>
+
+    <section class="coverage" data-aos="fade-up">
+      <h2>Export Coverage</h2>
+      <p>We proudly export to multiple countries around the globe.</p>
+      <div>
+        <img src="images/flags/uk.png" alt="UK">
+        <img src="images/flags/uae.png" alt="UAE">
+        <img src="images/flags/singapore.png" alt="Singapore">
+        <img src="images/flags/canada.png" alt="Canada">
+        <img src="images/flags/usa.png" alt="USA">
+        <img src="images/flags/australia.png" alt="Australia">
+      </div>
+    </section>
+
+    <section class="newsletter" data-aos="fade-up">
+      <h2>Stay Updated</h2>
+      <form action="#" method="POST">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
     <section class="testimonials" data-aos="fade-up">
       <h2>What Our Customers Say</h2>
-      <div class="testimonial">
+      <div class="testimonial" data-aos="fade-right">
         <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
         <strong>– Priya, Organic Store Owner, London</strong>
       </div>
-      <div class="testimonial">
+      <div class="testimonial" data-aos="fade-left">
         <p>"Fast delivery, great service, and authentic spices that remind me of home. Thank you, Janaki team!"</p>
         <strong>– Ahmed, Chef & Restaurant Owner, Dubai</strong>
       </div>
-      <div class="testimonial">
+      <div class="testimonial" data-aos="fade-right">
         <p>"Love the product variety. We imported Basmati rice and spices for our co-op and the feedback from members has been overwhelmingly positive."</p>
         <strong>– Sarah, Food Co-op Manager, Canada</strong>
+      </div>
+    </section>
+
+    <section class="founder" data-aos="fade-up">
+      <h2>Meet Our Founder</h2>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;">
+        <img src="images/gauri.jpg" alt="Gauri Abojwar" style="width: 160px; border-radius: 50%;">
+        <div>
+          <p><strong>Gauri Abojwar</strong>, founder of Janaki Global, is on a mission to bridge India's rich agricultural heritage with global markets. With a background in quality assurance and a passion for clean, sustainable food, she leads a team dedicated to promoting millets, moringa, and authentic Indian spices worldwide.</p>
+        </div>
       </div>
     </section>
 
     <!-- existing contact + footer -->
   </div>
 
-  <button class="chat-widget" onclick="window.open('https://chat.openai.com/', '_blank')">AI Chat</button>
+  <button class="chat-widget" onclick="document.getElementById('aiChatBox').style.display='flex'">AI Chat</button>
+  <div class="floating-chat" id="aiChatBox">
+    <div class="floating-chat-header">Ask Janaki AI</div>
+    <iframe src="https://janakiglobal-ai-chatbot.vercel.app/" width="100%" height="100%"></iframe>
+  </div>
+
+  <a href="https://wa.me/1234567890" target="_blank" style="position: fixed; bottom: 90px; right: 20px; z-index: 1000;">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp Chat" style="height:50px;">
+  </a>
 
   <script>
     AOS.init();
