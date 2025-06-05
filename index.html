@@ -9,167 +9,149 @@
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-
-    <!-- Header -->
-    <header class="site-header" data-aos="fade-down">
+  <header>
+    <div class="container header-container">
       <h1>Janaki Global</h1>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="#founders">Founders</a></li>
           <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#brochures">Brochures</a></li>
-          <li><a href="#use-cases">Use Cases</a></li>
-          <li><a href="#coverage">Coverage</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#newsletter">Newsletter</a></li>
         </ul>
       </nav>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="about" data-aos="fade-up">
-      <h2>About Janaki Global</h2>
-      <p>Janaki Global is committed to bringing the finest organic and natural food products from India to the world. Our mission is to support sustainable farming while delivering premium quality millets, moringa, spices, and other agro-products to global markets.</p>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products" data-aos="fade-up">
-      <h2>Our Products</h2>
-      <ul>
-        <li>Organic Millets (Pearl, Foxtail, Finger)</li>
-        <li>Moringa Leaf Powder & Capsules</li>
-        <li>Indian Spices (Turmeric, Cumin, Coriander, etc.)</li>
-        <li>Herbal Teas and Powders</li>
-        <li>Specialty Rice Varieties</li>
-      </ul>
-    </section>
-
-    <!-- Founders Section -->
-    <section id="founders" class="founders" data-aos="fade-up">
-      <h2>Our Founders</h2>
-      <ul>
-        <li><strong>Sandeep Abojwar</strong></li>
-        <li><strong>Neha Abojwar</strong></li>
-        <li><strong>Saurabh Abojwar</strong></li>
-        <li><strong>Gauri Abojwar</strong></li>
-      </ul>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications" data-aos="fade-up">
-      <h2>Our Certifications</h2>
-      <p>We are certified by top national and international quality and safety authorities.</p>
-      <div class="certification-logos">
-        <img src="images/fssai.png" alt="FSSAI" />
-        <img src="images/usda.png" alt="USDA Organic" />
-        <img src="images/apeda.png" alt="APEDA" />
-        <img src="images/iso.png" alt="ISO" />
-      </div>
-    </section>
-
-    <!-- Brochures Section -->
-    <section id="brochures" class="brochures" data-aos="fade-up">
-      <h2>Download Our Catalogs</h2>
-      <ul>
-        <li><a href="downloads/company-profile.pdf" target="_blank" rel="noopener noreferrer">Company Profile (PDF)</a></li>
-        <li><a href="downloads/product-catalog.pdf" target="_blank" rel="noopener noreferrer">Product Catalog</a></li>
-        <li><a href="downloads/nutrition-guide.pdf" target="_blank" rel="noopener noreferrer">Nutrition Guide</a></li>
-      </ul>
-    </section>
-
-    <!-- Use Cases Section -->
-    <section id="use-cases" class="use-cases" data-aos="fade-up">
-      <h2>Who We Serve</h2>
-      <ul>
-        <li>🏪 <strong>Retailers:</strong> Shelf-ready packs with private label options</li>
-        <li>🍽️ <strong>Restaurants:</strong> Premium bulk quantities with assured freshness</li>
-        <li>🏢 <strong>Distributors:</strong> Wide range of SKUs and scalable sourcing</li>
-      </ul>
-    </section>
-
-    <!-- Coverage Section -->
-    <section id="coverage" class="coverage" data-aos="fade-up">
-      <h2>Export Coverage</h2>
-      <p>We proudly export to multiple countries globally:</p>
-      <div class="flags">
-        <img src="images/flags/uk.png" alt="UK" />
-        <img src="images/flags/uae.png" alt="UAE" />
-        <img src="images/flags/singapore.png" alt="Singapore" />
-        <img src="images/flags/canada.png" alt="Canada" />
-        <img src="images/flags/usa.png" alt="USA" />
-        <img src="images/flags/australia.png" alt="Australia" />
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials" data-aos="fade-up">
-      <h2>What Our Customers Say</h2>
-      <div class="testimonial">
-        <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
-        <strong>– Priya, Organic Store Owner, London</strong>
-      </div>
-      <div class="testimonial">
-        <p>"Fast delivery, great service, and authentic spices that remind me of home. Thank you, Janaki team!"</p>
-        <strong>– Ahmed, Chef & Restaurant Owner, Dubai</strong>
-      </div>
-      <div class="testimonial">
-        <p>"Love the product variety. We imported Basmati rice and spices for our co-op and the feedback from members has been overwhelmingly positive."</p>
-        <strong>– Sarah, Food Co-op Manager, Canada</strong>
-      </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section id="newsletter" class="newsletter" data-aos="fade-up">
-      <h2>Stay Updated</h2>
-      <form action="#" method="POST">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact" data-aos="fade-up">
-      <h2>Contact Us</h2>
-      <p><strong>Email:</strong> <a href="mailto:contact@janakiglobal.com">contact@janakiglobal.com</a></p>
-      <p><strong>Phone:</strong> +91-1234567890</p>
-      <p><strong>Address:</strong> 123 Agro Street, Pune, Maharashtra, India</p>
-      <p><strong>Follow us on:</strong> 
-        <a href="https://facebook.com/janakiglobal" target="_blank" rel="noopener noreferrer">Facebook</a> | 
-        <a href="https://instagram.com/janakiglobal" target="_blank" rel="noopener noreferrer">Instagram</a> | 
-        <a href="https://linkedin.com/company/janakiglobal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer" data-aos="fade-up">
-      <p>© 2025 Janaki Global. All rights reserved.</p>
-    </footer>
-
-  </div>
-
-  <!-- Floating Chat Widget -->
-  <button class="chat-widget" onclick="document.getElementById('aiChatBox').style.display='flex'">AI Chat</button>
-  <div class="floating-chat" id="aiChatBox">
-    <div class="floating-chat-header">
-      Ask Janaki AI
-      <button class="floating-chat-close" onclick="document.getElementById('aiChatBox').style.display='none'">&times;</button>
     </div>
-    <iframe src="https://janakiglobal-ai-chatbot.vercel.app/" width="100%" height="100%"></iframe>
+  </header>
+
+  <main class="container">
+
+    <div class="section-container about-container" id="about" data-aos="fade-up">
+      <section class="about-section">
+        <h2>About Janaki Global</h2>
+        <p>Janaki Global is a family-founded company committed to bringing authentic and high-quality Indian natural and organic food products to the global market. Founded by Sandeep, Neha, Saurabh, and Gauri Abojwar, we specialize in millets, moringa, spices, and more.</p>
+      </section>
+    </div>
+
+    <div class="section-container products-container" id="products" data-aos="fade-up">
+      <section class="products-section">
+        <h2>Our Products</h2>
+        <ul class="products-list">
+          <li>Organic Millets</li>
+          <li>Moringa Powder & Leaves</li>
+          <li>Indian Spices & Masalas</li>
+          <li>Organic Pulses</li>
+          <li>Herbal Teas</li>
+          <li>Natural Health Supplements</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="section-container certifications-container" id="certifications" data-aos="fade-up">
+      <section class="certifications">
+        <h2>Our Certifications</h2>
+        <p>We take quality and compliance seriously. Our products are certified by national and international authorities.</p>
+        <div class="certifications-logos">
+          <img src="images/fssai.png" alt="FSSAI" />
+          <img src="images/usda.png" alt="USDA Organic" />
+          <img src="images/apeda.png" alt="APEDA" />
+          <img src="images/iso.png" alt="ISO" />
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container brochures-container" data-aos="fade-up">
+      <section class="brochures">
+        <h2>Download Our Catalogs</h2>
+        <ul>
+          <li><a href="downloads/company-profile.pdf" target="_blank" rel="noopener">Company Profile (PDF)</a></li>
+          <li><a href="downloads/product-catalog.pdf" target="_blank" rel="noopener">Product Catalog</a></li>
+          <li><a href="downloads/nutrition-guide.pdf" target="_blank" rel="noopener">Nutrition Guide</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="section-container use-cases-container" data-aos="fade-up">
+      <section class="use-cases">
+        <h2>Who We Serve</h2>
+        <ul>
+          <li>🏪 <strong>Retailers:</strong> Shelf-ready packs with private label options</li>
+          <li>🍽️ <strong>Restaurants:</strong> Premium bulk quantities with assured freshness</li>
+          <li>🏢 <strong>Distributors:</strong> Wide range of SKUs and scalable sourcing</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="section-container coverage-container" data-aos="fade-up">
+      <section class="coverage">
+        <h2>Export Coverage</h2>
+        <p>We proudly export to multiple countries around the globe.</p>
+        <div class="coverage-flags">
+          <img src="images/flags/uk.png" alt="UK" />
+          <img src="images/flags/uae.png" alt="UAE" />
+          <img src="images/flags/singapore.png" alt="Singapore" />
+          <img src="images/flags/canada.png" alt="Canada" />
+          <img src="images/flags/usa.png" alt="USA" />
+          <img src="images/flags/australia.png" alt="Australia" />
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container newsletter-container" data-aos="fade-up">
+      <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <form action="#" method="POST" class="newsletter-form" aria-label="Subscribe to newsletter">
+          <input type="email" placeholder="Enter your email" required aria-required="true" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="section-container testimonials-container" data-aos="fade-up">
+      <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial" data-aos="fade-right">
+          <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
+          <strong>– Priya, Organic Store Owner, London</strong>
+        </div>
+        <div class="testimonial" data-aos="fade-left">
+          <p>"Fast delivery, great service, and authentic spices that remind me of home. Thank you, Janaki team!"</p>
+          <strong>– Ahmed, Chef & Restaurant Owner, Dubai</strong>
+        </div>
+        <div class="testimonial" data-aos="fade-right">
+          <p>"Love the product variety. We imported Basmati rice and spices for our co-op and the feedback from members has been overwhelmingly positive."</p>
+          <strong>– Sarah, Food Co-op Manager, Canada</strong>
+        </div>
+      </section>
+    </div>
+
+    <div class="section-container contact-container" id="contact" data-aos="fade-up">
+      <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@janakiglobal.com">info@janakiglobal.com</a></p>
+        <p>Phone: +91 12345 67890</p>
+        <p>Address: 123 Agro Street, Mumbai, India</p>
+      </section>
+    </div>
+
+  </main>
+
+  <button class="chat-widget" aria-label="Open AI Chat" onclick="document.getElementById('aiChatBox').style.display='flex'">AI Chat</button>
+  <div class="floating-chat" id="aiChatBox" role="dialog" aria-modal="true" aria-labelledby="chatTitle" style="display:none;">
+    <div class="floating-chat-header">
+      <span id="chatTitle">Ask Janaki AI</span>
+      <button aria-label="Close AI Chat" class="close-chat" onclick="document.getElementById('aiChatBox').style.display='none'">×</button>
+    </div>
+    <iframe src="https://janakiglobal-ai-chatbot.vercel.app/" width="100%" height="100%" title="Janaki AI Chatbot"></iframe>
   </div>
 
-  <!-- WhatsApp Chat Link -->
-  <a href="https://wa.me/1234567890" target="_blank" style="position: fixed; bottom: 90px; right: 20px; z-index: 1000;">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp Chat" style="height:50px;" />
+  <a href="https://wa.me/1234567890" target="_blank" rel="noopener" class="whatsapp-link" aria-label="WhatsApp Chat">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp Chat" />
   </a>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
