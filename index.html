@@ -2,21 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more.">
-  <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more." />
+  <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products" />
   <title>Janaki Global</title>
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
-    <!-- Existing content -->
 
-    <section class="founders" data-aos="fade-up">
+    <!-- Header -->
+    <header class="site-header" data-aos="fade-down">
+      <h1>Janaki Global</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#founders">Founders</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#brochures">Brochures</a></li>
+          <li><a href="#use-cases">Use Cases</a></li>
+          <li><a href="#coverage">Coverage</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about" data-aos="fade-up">
+      <h2>About Janaki Global</h2>
+      <p>Janaki Global is committed to bringing the finest organic and natural food products from India to the world. Our mission is to support sustainable farming while delivering premium quality millets, moringa, spices, and other agro-products to global markets.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products" data-aos="fade-up">
+      <h2>Our Products</h2>
+      <ul>
+        <li>Organic Millets (Pearl, Foxtail, Finger)</li>
+        <li>Moringa Leaf Powder & Capsules</li>
+        <li>Indian Spices (Turmeric, Cumin, Coriander, etc.)</li>
+        <li>Herbal Teas and Powders</li>
+        <li>Specialty Rice Varieties</li>
+      </ul>
+    </section>
+
+    <!-- Founders Section -->
+    <section id="founders" class="founders" data-aos="fade-up">
       <h2>Our Founders</h2>
       <ul>
         <li><strong>Sandeep Abojwar</strong></li>
@@ -26,25 +62,30 @@
       </ul>
     </section>
 
-    <section class="certifications" data-aos="fade-up">
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications" data-aos="fade-up">
       <h2>Our Certifications</h2>
-      <p>We take quality and compliance seriously. Our products are certified by national and international authorities.</p>
-      <img src="images/fssai.png" alt="FSSAI">
-      <img src="images/usda.png" alt="USDA Organic">
-      <img src="images/apeda.png" alt="APEDA">
-      <img src="images/iso.png" alt="ISO">
+      <p>We are certified by top national and international quality and safety authorities.</p>
+      <div class="certification-logos">
+        <img src="images/fssai.png" alt="FSSAI" />
+        <img src="images/usda.png" alt="USDA Organic" />
+        <img src="images/apeda.png" alt="APEDA" />
+        <img src="images/iso.png" alt="ISO" />
+      </div>
     </section>
 
-    <section class="brochures" data-aos="fade-up">
+    <!-- Brochures Section -->
+    <section id="brochures" class="brochures" data-aos="fade-up">
       <h2>Download Our Catalogs</h2>
       <ul>
-        <li><a href="downloads/company-profile.pdf" target="_blank">Company Profile (PDF)</a></li>
-        <li><a href="downloads/product-catalog.pdf" target="_blank">Product Catalog</a></li>
-        <li><a href="downloads/nutrition-guide.pdf" target="_blank">Nutrition Guide</a></li>
+        <li><a href="downloads/company-profile.pdf" target="_blank" rel="noopener noreferrer">Company Profile (PDF)</a></li>
+        <li><a href="downloads/product-catalog.pdf" target="_blank" rel="noopener noreferrer">Product Catalog</a></li>
+        <li><a href="downloads/nutrition-guide.pdf" target="_blank" rel="noopener noreferrer">Nutrition Guide</a></li>
       </ul>
     </section>
 
-    <section class="use-cases" data-aos="fade-up">
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases" data-aos="fade-up">
       <h2>Who We Serve</h2>
       <ul>
         <li>🏪 <strong>Retailers:</strong> Shelf-ready packs with private label options</li>
@@ -53,46 +94,67 @@
       </ul>
     </section>
 
-    <section class="coverage" data-aos="fade-up">
+    <!-- Coverage Section -->
+    <section id="coverage" class="coverage" data-aos="fade-up">
       <h2>Export Coverage</h2>
-      <p>We proudly export to multiple countries around the globe.</p>
-      <div>
-        <img src="images/flags/uk.png" alt="UK">
-        <img src="images/flags/uae.png" alt="UAE">
-        <img src="images/flags/singapore.png" alt="Singapore">
-        <img src="images/flags/canada.png" alt="Canada">
-        <img src="images/flags/usa.png" alt="USA">
-        <img src="images/flags/australia.png" alt="Australia">
+      <p>We proudly export to multiple countries globally:</p>
+      <div class="flags">
+        <img src="images/flags/uk.png" alt="UK" />
+        <img src="images/flags/uae.png" alt="UAE" />
+        <img src="images/flags/singapore.png" alt="Singapore" />
+        <img src="images/flags/canada.png" alt="Canada" />
+        <img src="images/flags/usa.png" alt="USA" />
+        <img src="images/flags/australia.png" alt="Australia" />
       </div>
     </section>
 
-    <section class="newsletter" data-aos="fade-up">
-      <h2>Stay Updated</h2>
-      <form action="#" method="POST">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-
-    <section class="testimonials" data-aos="fade-up">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials" data-aos="fade-up">
       <h2>What Our Customers Say</h2>
-      <div class="testimonial" data-aos="fade-right">
+      <div class="testimonial">
         <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
         <strong>– Priya, Organic Store Owner, London</strong>
       </div>
-      <div class="testimonial" data-aos="fade-left">
+      <div class="testimonial">
         <p>"Fast delivery, great service, and authentic spices that remind me of home. Thank you, Janaki team!"</p>
         <strong>– Ahmed, Chef & Restaurant Owner, Dubai</strong>
       </div>
-      <div class="testimonial" data-aos="fade-right">
+      <div class="testimonial">
         <p>"Love the product variety. We imported Basmati rice and spices for our co-op and the feedback from members has been overwhelmingly positive."</p>
         <strong>– Sarah, Food Co-op Manager, Canada</strong>
       </div>
     </section>
 
-    <!-- Existing contact + footer -->
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter" data-aos="fade-up">
+      <h2>Stay Updated</h2>
+      <form action="#" method="POST">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong> <a href="mailto:contact@janakiglobal.com">contact@janakiglobal.com</a></p>
+      <p><strong>Phone:</strong> +91-1234567890</p>
+      <p><strong>Address:</strong> 123 Agro Street, Pune, Maharashtra, India</p>
+      <p><strong>Follow us on:</strong> 
+        <a href="https://facebook.com/janakiglobal" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+        <a href="https://instagram.com/janakiglobal" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+        <a href="https://linkedin.com/company/janakiglobal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" data-aos="fade-up">
+      <p>© 2025 Janaki Global. All rights reserved.</p>
+    </footer>
+
   </div>
 
+  <!-- Floating Chat Widget -->
   <button class="chat-widget" onclick="document.getElementById('aiChatBox').style.display='flex'">AI Chat</button>
   <div class="floating-chat" id="aiChatBox">
     <div class="floating-chat-header">
@@ -102,10 +164,12 @@
     <iframe src="https://janakiglobal-ai-chatbot.vercel.app/" width="100%" height="100%"></iframe>
   </div>
 
+  <!-- WhatsApp Chat Link -->
   <a href="https://wa.me/1234567890" target="_blank" style="position: fixed; bottom: 90px; right: 20px; z-index: 1000;">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp Chat" style="height:50px;">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp Chat" style="height:50px;" />
   </a>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
