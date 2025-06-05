@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more.">
+  <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products">
   <title>Janaki Global</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #ffffff; /* White background */
+      background-color: #ffffff;
       color: #222;
       margin: 0;
       padding: 0;
@@ -39,19 +42,40 @@
       font-weight: 600;
     }
 
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .top-bar input[type="text"] {
+      padding: 0.5rem;
+      width: 60%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .top-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .top-links a {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .promo-banner {
+      width: 100%;
+      height: 200px;
+      background: url('images/promo.jpg') no-repeat center center/cover;
+      border-radius: 12px;
+      margin: 1rem 0 2rem;
+    }
+
     section {
       margin: 2rem 0;
-    }
-
-    #hero {
-      background-color: #f4f9ff;
-      padding: 2rem;
-      text-align: center;
-      border-radius: 12px;
-    }
-
-    #hero h2 {
-      margin-bottom: 1rem;
     }
 
     .product-grid {
@@ -75,10 +99,27 @@
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     }
 
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
     .product-card h4 {
       font-size: 1.25rem;
       margin: 0.5rem 0;
       color: #333;
+    }
+
+    .product-card h4 a {
+      color: #007BFF;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .product-card h4 a:hover {
+      color: #0056b3;
     }
 
     .product-card p {
@@ -87,35 +128,18 @@
       margin-bottom: 0.75rem;
     }
 
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    #products h3 {
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem;
-      color: #444;
-      text-align: left;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 0.5rem;
-    }
-
-    .view-cart-button {
-      display: inline-block;
-      background-color: #007BFF;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
+    .quote-button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
       text-decoration: none;
+      font-size: 0.9rem;
       font-weight: bold;
-      transition: background-color 0.3s ease;
     }
 
-    .view-cart-button:hover {
-      background-color: #0056b3;
+    .quote-button:hover {
+      background-color: #218838;
     }
 
     footer {
@@ -128,33 +152,39 @@
       background-color: #ffffff;
     }
 
+    footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
-      .product-card img {
-        height: 140px;
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .product-card p {
-        font-size: 0.85rem;
-      }
-
-      .product-card h4 {
-        font-size: 1.1rem;
-      }
-
-      #products h3 {
-        font-size: 1.25rem;
-        text-align: center;
-      }
-
-      .view-cart-button {
+      .top-bar input[type="text"] {
         width: 100%;
-        box-sizing: border-box;
+        margin-bottom: 0.5rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="top-bar">
+      <input type="text" placeholder="Search products..." />
+      <div class="top-links">
+        <a href="#">Login / Sign Up</a>
+        <a href="#">Help</a>
+        <a href="#">AI Chat</a>
+      </div>
+    </div>
+
     <header>
       <h1>Janaki Global</h1>
       <nav>
@@ -164,65 +194,58 @@
       </nav>
     </header>
 
-    <section id="hero">
-      <h2>Premium Indian Food Products for Global Markets</h2>
-      <p>Exporting spices, pickles, grains and ready-to-eat meals to the UK and beyond.</p>
-    </section>
+    <div class="promo-banner"></div>
 
     <section id="about">
       <h2>About Us</h2>
-      <p>
-        Welcome to Janaki Global, your trusted partner in delivering India’s finest food and agro products to the global market.<br><br>
-        Based in Maharashtra, we are committed to exporting premium-quality agricultural goods that reflect the richness of India’s farming heritage. Our product range includes millets, spices, pickles, rice, aloe vera, dried fruits, and leafy vegetables—carefully sourced, hygienically processed, and packed with care.<br><br>
-        At Janaki Global, we believe in quality, transparency, and long-term partnerships. Whether you're an importer, wholesaler, or distributor, we ensure timely delivery, competitive pricing, and consistent product standards to meet your unique business needs.<br><br>
-        Our mission is to promote healthy living through natural, authentic Indian produce—taking the taste of India to every corner of the world.<br><br>
-        Let’s grow together, globally.
-      </p>
+      <p>Welcome to Janaki Global, your trusted partner in delivering India’s finest food and agro products to the global market...</p>
     </section>
 
     <section id="products">
-      <h2>Our Products</h2>
+      <h2>Top Categories</h2>
 
       <h3>Grains & Natural Health</h3>
       <div class="product-grid">
         <div class="product-card">
+          <img src="images/millets.jpg" alt="Organic Millets Display" />
           <h4><a href="millets.html">Millets</a></h4>
           <p>Organic and traditional millets, whole and ground.</p>
-          <img src="images/millets.jpg" alt="Millets" />
+          <a href="#contact" class="quote-button">Get Quote</a>
         </div>
         <div class="product-card">
+          <img src="images/moringa.jpg" alt="Fresh Moringa Leaves and Powder" />
           <h4><a href="moringa.html">Moringa</a></h4>
           <p>Fuel your life naturally – power up with Moringa!</p>
-          <img src="images/moringa.jpg" alt="Moringa" />
+          <a href="#contact" class="quote-button">Get Quote</a>
         </div>
         <div class="product-card">
+          <img src="images/cinnamon.jpg" alt="Cinnamon Sticks and Powder" />
           <h4><a href="cinnamon.html">Cinnamon</a></h4>
           <p>Spice up your health – naturally bold with Cinnamon!</p>
-          <img src="images/cinnamon.jpg" alt="Cinnamon" />
+          <a href="#contact" class="quote-button">Get Quote</a>
         </div>
       </div>
 
-      <h3>Flavors & Culinary Staples</h3>
+      <h3>Categories You May Like</h3>
       <div class="product-grid">
         <div class="product-card">
+          <img src="images/spices.jpg" alt="Assorted Indian Spices in Bowls" />
           <h4><a href="spices.html">Spices & Masalas</a></h4>
           <p>Traditional Indian spice blends, ground and whole.</p>
-          <img src="images/spices.jpg" alt="Spices" />
+          <a href="#contact" class="quote-button">Get Quote</a>
         </div>
         <div class="product-card">
+          <img src="images/pickles.jpg" alt="Traditional Indian Pickles" />
           <h4><a href="pickles.html">Pickles & Chutneys</a></h4>
           <p>Home-style pickles made with authentic Indian recipes.</p>
-          <img src="images/pickles.jpg" alt="Pickles" />
+          <a href="#contact" class="quote-button">Get Quote</a>
         </div>
         <div class="product-card">
+          <img src="images/rice.jpg" alt="Premium Basmati Rice Bag" />
           <h4><a href="rice.html">Basmati Rice</a></h4>
           <p>Premium aged Basmati rice for international cuisines.</p>
-          <img src="images/rice.jpg" alt="Basmati Rice" />
+          <a href="#contact" class="quote-button">Get Quote</a>
         </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="cart.html" class="view-cart-button">🛒 View Cart</a>
       </div>
     </section>
 
@@ -235,9 +258,12 @@
 
     <footer>
       <p>&copy; 2025 Janaki Global. All rights reserved.</p>
+      <p>
+        <a href="#about">About</a> |
+        <a href="#products">Products</a> |
+        <a href="#contact">Contact</a>
+      </p>
     </footer>
   </div>
 </body>
 </html>
-
-
