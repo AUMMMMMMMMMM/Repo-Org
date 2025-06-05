@@ -1,286 +1,56 @@
-/* General Styles */
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #000;
-  line-height: 1.6;
+/* Section container wrapper */
+.section-container {
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+.section-container:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* Header */
-.site-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+/* Different background colors per section (optional) */
+.about-container {
+  background-color: #fff8f0; /* subtle cream */
 }
 
-.site-header h1 {
-  font-weight: 700;
-  font-size: 2rem;
-  margin: 0;
+.products-container {
+  background-color: #f5faff; /* subtle blue tint */
 }
 
-.site-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+.certifications-container {
+  background-color: #fffaf5; /* subtle warm tint */
 }
 
-.site-header nav ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  transition: color 0.3s ease;
+.brochures-container {
+  background-color: #f0fff6; /* subtle green tint */
 }
 
-.site-header nav ul li a:hover {
-  color: #007bff;
+.use-cases-container {
+  background-color: #fff8ff; /* subtle purple tint */
 }
 
-/* Sections */
-section {
-  margin-bottom: 50px;
+.coverage-container {
+  background-color: #f9f9ff; /* very subtle blue */
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  font-weight: 700;
-  border-bottom: 3px solid #007bff;
-  display: inline-block;
-  padding-bottom: 5px;
+.newsletter-container {
+  background-color: #fffefb; /* very subtle warm */
 }
 
-p {
-  font-size: 1rem;
-  margin-bottom: 15px;
+.testimonials-container {
+  background-color: #f9fbff; /* very subtle light blue */
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 15px;
+.contact-container {
+  background-color: #fff8f8; /* subtle pink */
 }
 
-ul li {
-  margin-bottom: 8px;
-}
-
-/* Founders */
-.founders ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.founders ul li {
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-/* Certifications */
-.certification-logos {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-.certification-logos img {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(0);
-  transition: transform 0.3s ease;
-}
-
-.certification-logos img:hover {
-  transform: scale(1.1);
-}
-
-/* Brochures */
-.brochures ul li a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: 600;
-}
-
-.brochures ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Coverage Flags */
-.flags {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.flags img {
-  height: 35px;
-  width: auto;
-  border-radius: 4px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-/* Testimonials */
-.testimonials .testimonial {
-  background: #f8f9fa;
-  border-left: 5px solid #007bff;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  font-style: italic;
-}
-
-.testimonials .testimonial strong {
-  display: block;
-  margin-top: 10px;
-  font-style: normal;
-  font-weight: 700;
-  color: #333;
-}
-
-/* Newsletter */
-.newsletter form {
-  display: flex;
-  max-width: 400px;
-  gap: 10px;
-}
-
-.newsletter input[type="email"] {
-  flex: 1;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.newsletter button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.newsletter button:hover {
-  background-color: #0056b3;
-}
-
-/* Contact */
-.contact a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-.site-footer {
+/* Center headings inside containers */
+.section-container h2 {
+  margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  padding: 15px 0;
-  border-top: 1px solid #eee;
-  margin-top: 50px;
-}
-
-/* Floating Chat Widget */
-.chat-widget {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
-  z-index: 9999;
-}
-
-.chat-widget:hover {
-  background-color: #0056b3;
-}
-
-/* Floating Chat Box */
-.floating-chat {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 350px;
-  height: 450px;
-  background: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  flex-direction: column;
-  overflow: hidden;
-  z-index: 9999;
-}
-
-.floating-chat-header {
-  background-color: #007bff;
-  color: white;
-  font-weight: 700;
-  padding: 12px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-}
-
-.floating-chat-close {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .site-header nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .newsletter form {
-    flex-direction: column;
-  }
-
-  .newsletter input[type="email"], .newsletter button {
-    width: 100%;
-  }
-
-  .floating-chat {
-    width: 90vw;
-    height: 70vh;
-    bottom: 90px;
-    right: 5%;
-  }
-}
+  color: #007b
