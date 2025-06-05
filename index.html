@@ -3,73 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more." />
-  <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products" />
+  <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more.">
+  <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products">
   <title>Janaki Global</title>
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
-    /* Inline styles relevant to product cards and chat widget */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
+    body {
+      background: white;
+      color: black;
+      font-family: 'Inter', sans-serif;
     }
-
-    .product-card {
-      background-color: #fff;
+    .testimonials, .certifications, .brochures, .use-cases, .coverage, .newsletter, .founder {
+      background: #f9f9f9;
+      padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 3rem 0;
+    }
+    .testimonial {
+      margin-bottom: 1.5rem;
       padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: white;
+      border-left: 4px solid #007BFF;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-
-    .product-card:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      transform: translateY(-5px);
+    .testimonial p {
+      font-style: italic;
     }
-
-    .product-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+    .testimonial strong {
+      display: block;
+      margin-top: 0.5rem;
+      color: #333;
     }
-
-    .product-card h3 {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .product-card a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .product-card button {
-      background-color: #007bff;
+    .chat-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007BFF;
       color: white;
       border: none;
-      padding: 0.6rem 1.4rem;
-      border-radius: 6px;
+      padding: 0.75rem 1.2rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      font-weight: bold;
       cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
+      z-index: 1000;
     }
-
-    .product-card button:hover {
-      background-color: #0056b3;
+    .floating-chat {
+      position: fixed;
+      bottom: 140px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      z-index: 1000;
     }
-
-    /* Chat widget close button */
+    .floating-chat iframe {
+      flex-grow: 1;
+      border: none;
+      border-radius: 12px;
+    }
     .floating-chat-header {
       background: #007BFF;
       color: white;
@@ -77,124 +78,33 @@
       text-align: center;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
-      position: relative;
-      font-weight: 600;
-    }
-    .close-chat-btn {
-      position: absolute;
-      top: 4px;
-      right: 8px;
-      background: transparent;
-      border: none;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    /* Container styling for section-wise alignment */
-    .section-container {
-      max-width: 1200px;
-      margin: 0 auto 3rem auto;
-      padding: 0 1rem;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Company Header / Name -->
-    <header class="section-container" data-aos="fade-down">
-      <h1>Janaki Global</h1>
-      <p>Bringing India's finest organic and natural food products to global markets.</p>
-    </header>
+    <h1>Welcome to Janaki Global</h1>
+    <p>Explore our wide range of organic and sustainable products.</p>
 
-    <!-- About Section -->
-    <section class="section-container" id="about" data-aos="fade-up">
-      <h2>About Us</h2>
-      <p>Janaki Global is a family-founded enterprise committed to providing high-quality organic millets, moringa, spices, pulses, and herbal teas to customers worldwide.</p>
-      <p>Founded by Sandeep Abojwar, Neha Abojwar, Saurabh Abojwar, and Gauri Abojwar, we leverage decades of experience in agriculture and export to ensure quality and sustainability.</p>
-    </section>
-
-    <!-- Products Section -->
-    <div class="section-container products-container" id="products" data-aos="fade-up">
-      <section class="products-section">
-        <h2>Our Products</h2>
-        <div class="products-grid">
-
-          <div class="product-card">
-            <a href="organic-millets.html">
-              <img src="images/products/organic-millets.jpg" alt="Organic Millets" />
-              <h3>Organic Millets</h3>
-            </a>
-            <button onclick="window.location.href='get-quote.html?product=organic-millets'">Get Quote</button>
-          </div>
-
-          <div class="product-card">
-            <a href="moringa-powder.html">
-              <img src="images/products/moringa-powder.jpg" alt="Moringa Powder & Leaves" />
-              <h3>Moringa Powder & Leaves</h3>
-            </a>
-            <button onclick="window.location.href='get-quote.html?product=moringa-powder'">Get Quote</button>
-          </div>
-
-          <div class="product-card">
-            <a href="indian-spices.html">
-              <img src="images/products/indian-spices.jpg" alt="Indian Spices & Masalas" />
-              <h3>Indian Spices & Masalas</h3>
-            </a>
-            <button onclick="window.location.href='get-quote.html?product=indian-spices'">Get Quote</button>
-          </div>
-
-          <div class="product-card">
-            <a href="organic-pulses.html">
-              <img src="images/products/organic-pulses.jpg" alt="Organic Pulses" />
-              <h3>Organic Pulses</h3>
-            </a>
-            <button onclick="window.location.href='get-quote.html?product=organic-pulses'">Get Quote</button>
-          </div>
-
-          <div class="product-card">
-            <a href="herbal-teas.html">
-              <img src="images/products/herbal-teas.jpg" alt="Herbal Teas" />
-              <h3>Herbal Teas</h3>
-            </a>
-            <button onclick="window.location.href='get-quote.html?product=herbal-teas'">Get Quote</button>
-          </div>
-
-          <div class="product-card">
-            <a href="natural-health-supplements.html">
-              <img src="images/products/natural-health-supplements.jpg" alt="Natural Health Supplements" />
-              <h3>Natural Health Supplements</h3>
-            </a>
-            <button onclick="window.location.href='get-quote.html?product=natural-health-supplements'">Get Quote</button>
-          </div>
-
-        </div>
-      </section>
-    </div>
-
-    <!-- Certifications -->
-    <section class="section-container certifications" data-aos="fade-up">
+    <section class="certifications" data-aos="fade-up">
       <h2>Our Certifications</h2>
       <p>We take quality and compliance seriously. Our products are certified by national and international authorities.</p>
-      <img src="images/fssai.png" alt="FSSAI" />
-      <img src="images/usda.png" alt="USDA Organic" />
-      <img src="images/apeda.png" alt="APEDA" />
-      <img src="images/iso.png" alt="ISO" />
+      <img src="images/fssai.png" alt="FSSAI">
+      <img src="images/usda.png" alt="USDA Organic">
+      <img src="images/apeda.png" alt="APEDA">
+      <img src="images/iso.png" alt="ISO">
     </section>
 
-    <!-- Brochures -->
-    <section class="section-container brochures" data-aos="fade-up">
+    <section class="brochures" data-aos="fade-up">
       <h2>Download Our Catalogs</h2>
       <ul>
-        <li><a href="downloads/company-profile.pdf" target="_blank" rel="noopener noreferrer">Company Profile (PDF)</a></li>
-        <li><a href="downloads/product-catalog.pdf" target="_blank" rel="noopener noreferrer">Product Catalog</a></li>
-        <li><a href="downloads/nutrition-guide.pdf" target="_blank" rel="noopener noreferrer">Nutrition Guide</a></li>
+        <li><a href="downloads/company-profile.pdf" target="_blank">Company Profile (PDF)</a></li>
+        <li><a href="downloads/product-catalog.pdf" target="_blank">Product Catalog</a></li>
+        <li><a href="downloads/nutrition-guide.pdf" target="_blank">Nutrition Guide</a></li>
       </ul>
     </section>
 
-    <!-- Use Cases -->
-    <section class="section-container use-cases" data-aos="fade-up">
+    <section class="use-cases" data-aos="fade-up">
       <h2>Who We Serve</h2>
       <ul>
         <li>🏪 <strong>Retailers:</strong> Shelf-ready packs with private label options</li>
@@ -203,31 +113,28 @@
       </ul>
     </section>
 
-    <!-- Coverage -->
-    <section class="section-container coverage" data-aos="fade-up">
+    <section class="coverage" data-aos="fade-up">
       <h2>Export Coverage</h2>
       <p>We proudly export to multiple countries around the globe.</p>
       <div>
-        <img src="images/flags/uk.png" alt="UK" />
-        <img src="images/flags/uae.png" alt="UAE" />
-        <img src="images/flags/singapore.png" alt="Singapore" />
-        <img src="images/flags/canada.png" alt="Canada" />
-        <img src="images/flags/usa.png" alt="USA" />
-        <img src="images/flags/australia.png" alt="Australia" />
+        <img src="images/flags/uk.png" alt="UK">
+        <img src="images/flags/uae.png" alt="UAE">
+        <img src="images/flags/singapore.png" alt="Singapore">
+        <img src="images/flags/canada.png" alt="Canada">
+        <img src="images/flags/usa.png" alt="USA">
+        <img src="images/flags/australia.png" alt="Australia">
       </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="section-container newsletter" data-aos="fade-up">
+    <section class="newsletter" data-aos="fade-up">
       <h2>Stay Updated</h2>
       <form action="#" method="POST">
-        <input type="email" placeholder="Enter your email" required />
+        <input type="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section-container testimonials" data-aos="fade-up">
+    <section class="testimonials" data-aos="fade-up">
       <h2>What Our Customers Say</h2>
       <div class="testimonial" data-aos="fade-right">
         <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
@@ -243,18 +150,30 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section-container contact" data-aos="fade-up">
-      <h2>Contact Us</h2>
-      <p>Email: contact@janakiglobal.com</p>
-      <p>Phone: +91 98765 43210</p>
-      <p>Address: 123 Agro Street, Pune, Maharashtra, India</p>
+    <section class="founder" data-aos="fade-up">
+      <h2>Meet Our Founders</h2>
+      <ul>
+        <li><strong>Sandeep Abojwar</strong></li>
+        <li><strong>Neha Abojwar</strong></li>
+        <li><strong>Saurabh Abojwar</strong></li>
+        <li><strong>Gauri Abojwar</strong></li>
+      </ul>
     </section>
-
   </div>
 
-  <!-- AI Chat Widget Button and Window -->
   <button class="chat-widget" onclick="document.getElementById('aiChatBox').style.display='flex'">AI Chat</button>
-  <div class="floating-chat" id="aiChatBox" style="display:none; flex-direction: column;">
-    <div class="floating-chat-header">
-      Ask Jan
+  <div class="floating-chat" id="aiChatBox">
+    <div class="floating-chat-header">Ask Janaki AI</div>
+    <iframe src="https://janakiglobal-ai-chatbot.vercel.app/" width="100%" height="100%"></iframe>
+  </div>
+
+  <a href="https://wa.me/1234567890" target="_blank" style="position: fixed; bottom: 90px; right: 20px; z-index: 1000;">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp Chat" style="height:50px;">
+  </a>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+
