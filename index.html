@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more." />
   <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products" />
   <title>Janaki Global</title>
@@ -11,149 +11,250 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* Inline styles relevant to product cards and chat widget */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .product-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-card button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Chat widget close button */
+    .floating-chat-header {
+      background: #007BFF;
+      color: white;
+      padding: 0.5rem;
+      text-align: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      position: relative;
+      font-weight: 600;
+    }
+    .close-chat-btn {
+      position: absolute;
+      top: 4px;
+      right: 8px;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Container styling for section-wise alignment */
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container header-container">
+  <div class="container">
+    <!-- Company Header / Name -->
+    <header class="section-container" data-aos="fade-down">
       <h1>Janaki Global</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      <p>Bringing India's finest organic and natural food products to global markets.</p>
+    </header>
 
-  <main class="container">
+    <!-- About Section -->
+    <section class="section-container" id="about" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>Janaki Global is a family-founded enterprise committed to providing high-quality organic millets, moringa, spices, pulses, and herbal teas to customers worldwide.</p>
+      <p>Founded by Sandeep Abojwar, Neha Abojwar, Saurabh Abojwar, and Gauri Abojwar, we leverage decades of experience in agriculture and export to ensure quality and sustainability.</p>
+    </section>
 
-    <div class="section-container about-container" id="about" data-aos="fade-up">
-      <section class="about-section">
-        <h2>About Janaki Global</h2>
-        <p>Janaki Global is a family-founded company committed to bringing authentic and high-quality Indian natural and organic food products to the global market. Founded by Sandeep, Neha, Saurabh, and Gauri Abojwar, we specialize in millets, moringa, spices, and more.</p>
-      </section>
-    </div>
-
+    <!-- Products Section -->
     <div class="section-container products-container" id="products" data-aos="fade-up">
       <section class="products-section">
         <h2>Our Products</h2>
-        <ul class="products-list">
-          <li>Organic Millets</li>
-          <li>Moringa Powder & Leaves</li>
-          <li>Indian Spices & Masalas</li>
-          <li>Organic Pulses</li>
-          <li>Herbal Teas</li>
-          <li>Natural Health Supplements</li>
-        </ul>
-      </section>
-    </div>
+        <div class="products-grid">
 
-    <div class="section-container certifications-container" id="certifications" data-aos="fade-up">
-      <section class="certifications">
-        <h2>Our Certifications</h2>
-        <p>We take quality and compliance seriously. Our products are certified by national and international authorities.</p>
-        <div class="certifications-logos">
-          <img src="images/fssai.png" alt="FSSAI" />
-          <img src="images/usda.png" alt="USDA Organic" />
-          <img src="images/apeda.png" alt="APEDA" />
-          <img src="images/iso.png" alt="ISO" />
+          <div class="product-card">
+            <a href="organic-millets.html">
+              <img src="images/products/organic-millets.jpg" alt="Organic Millets" />
+              <h3>Organic Millets</h3>
+            </a>
+            <button onclick="window.location.href='get-quote.html?product=organic-millets'">Get Quote</button>
+          </div>
+
+          <div class="product-card">
+            <a href="moringa-powder.html">
+              <img src="images/products/moringa-powder.jpg" alt="Moringa Powder & Leaves" />
+              <h3>Moringa Powder & Leaves</h3>
+            </a>
+            <button onclick="window.location.href='get-quote.html?product=moringa-powder'">Get Quote</button>
+          </div>
+
+          <div class="product-card">
+            <a href="indian-spices.html">
+              <img src="images/products/indian-spices.jpg" alt="Indian Spices & Masalas" />
+              <h3>Indian Spices & Masalas</h3>
+            </a>
+            <button onclick="window.location.href='get-quote.html?product=indian-spices'">Get Quote</button>
+          </div>
+
+          <div class="product-card">
+            <a href="organic-pulses.html">
+              <img src="images/products/organic-pulses.jpg" alt="Organic Pulses" />
+              <h3>Organic Pulses</h3>
+            </a>
+            <button onclick="window.location.href='get-quote.html?product=organic-pulses'">Get Quote</button>
+          </div>
+
+          <div class="product-card">
+            <a href="herbal-teas.html">
+              <img src="images/products/herbal-teas.jpg" alt="Herbal Teas" />
+              <h3>Herbal Teas</h3>
+            </a>
+            <button onclick="window.location.href='get-quote.html?product=herbal-teas'">Get Quote</button>
+          </div>
+
+          <div class="product-card">
+            <a href="natural-health-supplements.html">
+              <img src="images/products/natural-health-supplements.jpg" alt="Natural Health Supplements" />
+              <h3>Natural Health Supplements</h3>
+            </a>
+            <button onclick="window.location.href='get-quote.html?product=natural-health-supplements'">Get Quote</button>
+          </div>
+
         </div>
       </section>
     </div>
 
-    <div class="section-container brochures-container" data-aos="fade-up">
-      <section class="brochures">
-        <h2>Download Our Catalogs</h2>
-        <ul>
-          <li><a href="downloads/company-profile.pdf" target="_blank" rel="noopener">Company Profile (PDF)</a></li>
-          <li><a href="downloads/product-catalog.pdf" target="_blank" rel="noopener">Product Catalog</a></li>
-          <li><a href="downloads/nutrition-guide.pdf" target="_blank" rel="noopener">Nutrition Guide</a></li>
-        </ul>
-      </section>
-    </div>
+    <!-- Certifications -->
+    <section class="section-container certifications" data-aos="fade-up">
+      <h2>Our Certifications</h2>
+      <p>We take quality and compliance seriously. Our products are certified by national and international authorities.</p>
+      <img src="images/fssai.png" alt="FSSAI" />
+      <img src="images/usda.png" alt="USDA Organic" />
+      <img src="images/apeda.png" alt="APEDA" />
+      <img src="images/iso.png" alt="ISO" />
+    </section>
 
-    <div class="section-container use-cases-container" data-aos="fade-up">
-      <section class="use-cases">
-        <h2>Who We Serve</h2>
-        <ul>
-          <li>🏪 <strong>Retailers:</strong> Shelf-ready packs with private label options</li>
-          <li>🍽️ <strong>Restaurants:</strong> Premium bulk quantities with assured freshness</li>
-          <li>🏢 <strong>Distributors:</strong> Wide range of SKUs and scalable sourcing</li>
-        </ul>
-      </section>
-    </div>
+    <!-- Brochures -->
+    <section class="section-container brochures" data-aos="fade-up">
+      <h2>Download Our Catalogs</h2>
+      <ul>
+        <li><a href="downloads/company-profile.pdf" target="_blank" rel="noopener noreferrer">Company Profile (PDF)</a></li>
+        <li><a href="downloads/product-catalog.pdf" target="_blank" rel="noopener noreferrer">Product Catalog</a></li>
+        <li><a href="downloads/nutrition-guide.pdf" target="_blank" rel="noopener noreferrer">Nutrition Guide</a></li>
+      </ul>
+    </section>
 
-    <div class="section-container coverage-container" data-aos="fade-up">
-      <section class="coverage">
-        <h2>Export Coverage</h2>
-        <p>We proudly export to multiple countries around the globe.</p>
-        <div class="coverage-flags">
-          <img src="images/flags/uk.png" alt="UK" />
-          <img src="images/flags/uae.png" alt="UAE" />
-          <img src="images/flags/singapore.png" alt="Singapore" />
-          <img src="images/flags/canada.png" alt="Canada" />
-          <img src="images/flags/usa.png" alt="USA" />
-          <img src="images/flags/australia.png" alt="Australia" />
-        </div>
-      </section>
-    </div>
+    <!-- Use Cases -->
+    <section class="section-container use-cases" data-aos="fade-up">
+      <h2>Who We Serve</h2>
+      <ul>
+        <li>🏪 <strong>Retailers:</strong> Shelf-ready packs with private label options</li>
+        <li>🍽️ <strong>Restaurants:</strong> Premium bulk quantities with assured freshness</li>
+        <li>🏢 <strong>Distributors:</strong> Wide range of SKUs and scalable sourcing</li>
+      </ul>
+    </section>
 
-    <div class="section-container newsletter-container" data-aos="fade-up">
-      <section class="newsletter">
-        <h2>Stay Updated</h2>
-        <form action="#" method="POST" class="newsletter-form" aria-label="Subscribe to newsletter">
-          <input type="email" placeholder="Enter your email" required aria-required="true" />
-          <button type="submit">Subscribe</button>
-        </form>
-      </section>
-    </div>
+    <!-- Coverage -->
+    <section class="section-container coverage" data-aos="fade-up">
+      <h2>Export Coverage</h2>
+      <p>We proudly export to multiple countries around the globe.</p>
+      <div>
+        <img src="images/flags/uk.png" alt="UK" />
+        <img src="images/flags/uae.png" alt="UAE" />
+        <img src="images/flags/singapore.png" alt="Singapore" />
+        <img src="images/flags/canada.png" alt="Canada" />
+        <img src="images/flags/usa.png" alt="USA" />
+        <img src="images/flags/australia.png" alt="Australia" />
+      </div>
+    </section>
 
-    <div class="section-container testimonials-container" data-aos="fade-up">
-      <section class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial" data-aos="fade-right">
-          <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
-          <strong>– Priya, Organic Store Owner, London</strong>
-        </div>
-        <div class="testimonial" data-aos="fade-left">
-          <p>"Fast delivery, great service, and authentic spices that remind me of home. Thank you, Janaki team!"</p>
-          <strong>– Ahmed, Chef & Restaurant Owner, Dubai</strong>
-        </div>
-        <div class="testimonial" data-aos="fade-right">
-          <p>"Love the product variety. We imported Basmati rice and spices for our co-op and the feedback from members has been overwhelmingly positive."</p>
-          <strong>– Sarah, Food Co-op Manager, Canada</strong>
-        </div>
-      </section>
-    </div>
+    <!-- Newsletter -->
+    <section class="section-container newsletter" data-aos="fade-up">
+      <h2>Stay Updated</h2>
+      <form action="#" method="POST">
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
 
-    <div class="section-container contact-container" id="contact" data-aos="fade-up">
-      <section class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@janakiglobal.com">info@janakiglobal.com</a></p>
-        <p>Phone: +91 12345 67890</p>
-        <p>Address: 123 Agro Street, Mumbai, India</p>
-      </section>
-    </div>
+    <!-- Testimonials -->
+    <section class="section-container testimonials" data-aos="fade-up">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial" data-aos="fade-right">
+        <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
+        <strong>– Priya, Organic Store Owner, London</strong>
+      </div>
+      <div class="testimonial" data-aos="fade-left">
+        <p>"Fast delivery, great service, and authentic spices that remind me of home. Thank you, Janaki team!"</p>
+        <strong>– Ahmed, Chef & Restaurant Owner, Dubai</strong>
+      </div>
+      <div class="testimonial" data-aos="fade-right">
+        <p>"Love the product variety. We imported Basmati rice and spices for our co-op and the feedback from members has been overwhelmingly positive."</p>
+        <strong>– Sarah, Food Co-op Manager, Canada</strong>
+      </div>
+    </section>
 
-  </main>
+    <!-- Contact -->
+    <section class="section-container contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>Email: contact@janakiglobal.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 123 Agro Street, Pune, Maharashtra, India</p>
+    </section>
 
-  <button class="chat-widget" aria-label="Open AI Chat" onclick="document.getElementById('aiChatBox').style.display='flex'">AI Chat</button>
-  <div class="floating-chat" id="aiChatBox" role="dialog" aria-modal="true" aria-labelledby="chatTitle" style="display:none;">
-    <div class="floating-chat-header">
-      <span id="chatTitle">Ask Janaki AI</span>
-      <button aria-label="Close AI Chat" class="close-chat" onclick="document.getElementById('aiChatBox').style.display='none'">×</button>
-    </div>
-    <iframe src="https://janakiglobal-ai-chatbot.vercel.app/" width="100%" height="100%" title="Janaki AI Chatbot"></iframe>
   </div>
 
-  <a href="https://wa.me/1234567890" target="_blank" rel="noopener" class="whatsapp-link" aria-label="WhatsApp Chat">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp Chat" />
-  </a>
-
-  <script>
-    AOS.init();
-  </script>
-</body>
-</html>
+  <!-- AI Chat Widget Button and Window -->
+  <button class="chat-widget" onclick="document.getElementById('aiChatBox').style.display='flex'">AI Chat</button>
+  <div class="floating-chat" id="aiChatBox" style="display:none; flex-direction: column;">
+    <div class="floating-chat-header">
+      Ask Jan
