@@ -1,56 +1,48 @@
-/* Section container wrapper */
-.section-container {
-  padding: 3rem 2rem;
-  margin-bottom: 3rem;
-  border-radius: 12px;
-  background-color: #fefefe;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s ease;
+.products {
+  padding: 2rem 0;
 }
-
-.section-container:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-/* Different background colors per section (optional) */
-.about-container {
-  background-color: #fff8f0; /* subtle cream */
-}
-
-.products-container {
-  background-color: #f5faff; /* subtle blue tint */
-}
-
-.certifications-container {
-  background-color: #fffaf5; /* subtle warm tint */
-}
-
-.brochures-container {
-  background-color: #f0fff6; /* subtle green tint */
-}
-
-.use-cases-container {
-  background-color: #fff8ff; /* subtle purple tint */
-}
-
-.coverage-container {
-  background-color: #f9f9ff; /* very subtle blue */
-}
-
-.newsletter-container {
-  background-color: #fffefb; /* very subtle warm */
-}
-
-.testimonials-container {
-  background-color: #f9fbff; /* very subtle light blue */
-}
-
-.contact-container {
-  background-color: #fff8f8; /* subtle pink */
-}
-
-/* Center headings inside containers */
-.section-container h2 {
-  margin-bottom: 1.5rem;
+.products h2 {
   text-align: center;
-  color: #007b
+  margin-bottom: 2rem;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #007BFF;
+}
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.quote-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #007BFF;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.quote-btn:hover {
+  background: #0056b3;
+}
