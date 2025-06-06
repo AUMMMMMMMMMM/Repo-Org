@@ -16,14 +16,51 @@
       background: white;
       color: black;
       font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #6a1b9a;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
     }
     header.hero {
-      background: #f4f4f4;
+      background: linear-gradient(to right, #9c27b0, #6a1b9a);
+      color: white;
       text-align: center;
       padding: 3rem 1rem;
       border-radius: 12px;
       margin: 2rem auto;
       max-width: 960px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem 1rem;
+    }
+    .section h2 {
+      color: #6a1b9a;
+      margin-bottom: 1rem;
+    }
+    .founders a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #6a1b9a;
+      font-weight: 600;
     }
     .product-grid {
       display: grid;
@@ -63,6 +100,7 @@
       color: white;
       text-decoration: none;
       border-radius: 8px;
+      font-weight: 600;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -81,10 +119,18 @@
     .testimonial {
       display: none;
       text-align: center;
+      font-style: italic;
     }
     .testimonial.active {
       display: block;
       animation: fadeIn 1s ease-in;
+    }
+    .testimonial strong {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 700;
+      font-style: normal;
+      color: #d1c4e9;
     }
     .testimonial-nav {
       display: flex;
@@ -99,44 +145,65 @@
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .testimonial-nav button:hover {
+      background-color: #d1c4e9;
     }
   </style>
 </head>
 <body>
-  <header class="hero">
+  <nav>
+    <div>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+    </div>
+    <div class="logo">Janaki Global</div>
+    <div>
+      <a href="#founders">Founders</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" data-aos="fade-down">
     <h1>Welcome to Janaki Global</h1>
     <p>Exporting the richness of India to the world. Explore our organic and sustainable range.</p>
   </header>
 
-  <section class="product-grid">
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>Janaki Global is committed to delivering premium-quality Indian agro products to customers around the world. We specialize in millets, moringa, spices, and more — all sourced from trusted farmers and processed with care.</p>
+  </section>
+
+  <section id="products" class="product-grid" data-aos="fade-up">
     <div class="product-card" data-aos="zoom-in">
-      <img src="images/products/millets.jpg" alt="Millets">
+      <img src="images/products/millets.jpg" alt="Millets" />
       <h3><a href="millets.html">Millets</a></h3>
       <a href="get-quote.html">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
-      <img src="images/products/moringa.jpg" alt="Moringa">
+      <img src="images/products/moringa.jpg" alt="Moringa" />
       <h3><a href="moringa.html">Moringa</a></h3>
       <a href="get-quote.html">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
-      <img src="images/products/spices.jpg" alt="Spices & Masalas">
+      <img src="images/products/spices.jpg" alt="Spices & Masalas" />
       <h3><a href="spices.html">Spices & Masalas</a></h3>
       <a href="get-quote.html">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
-      <img src="images/products/pickles.jpg" alt="Pickles">
+      <img src="images/products/pickles.jpg" alt="Pickles" />
       <h3><a href="pickles.html">Pickles</a></h3>
       <a href="get-quote.html">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
-      <img src="images/products/basmati.jpg" alt="Basmati Rice">
+      <img src="images/products/basmati.jpg" alt="Basmati Rice" />
       <h3><a href="basmati.html">Basmati Rice</a></h3>
       <a href="get-quote.html">Get Quote</a>
     </div>
   </section>
 
-  <section class="testimonials">
+  <section class="testimonials" data-aos="fade-up">
     <div class="testimonial active">
       <p>“Amazing quality and prompt service. Highly recommended!”</p>
       <strong>- A Happy Client</strong>
@@ -155,15 +222,41 @@
     </div>
   </section>
 
+  <section id="founders" class="section founders" data-aos="fade-up">
+    <h2>Our Founders</h2>
+    <a href="https://www.linkedin.com/in/sandeepabojwar" target="_blank" rel="noopener noreferrer">Sandeep Abojwar</a>
+    <a href="https://www.linkedin.com/in/nehaabojwar" target="_blank" rel="noopener noreferrer">Neha Abojwar</a>
+    <a href="https://www.linkedin.com/in/saurabhabojwar" target="_blank" rel="noopener noreferrer">Saurabh Abojwar</a>
+    <a href="https://www.linkedin.com/in/gauriabojwar" target="_blank" rel="noopener noreferrer">Gauri Abojwar</a>
+  </section>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>Email: contact@janakiglobal.com</p>
+    <p>Phone: +91-1234567890</p>
+  </section>
+
+  <footer class="section" style="text-align:center; color:#6a1b9a;">
+    &copy; 2025 Janaki Global. All rights reserved.
+  </footer>
+
   <script>
     AOS.init();
-    let index = 0;
+
+    let currentTestimonial = 0;
     const testimonials = document.querySelectorAll('.testimonial');
 
-    function changeTestimonial(step) {
-      testimonials[index].classList.remove('active');
-      index = (index + step + testimonials.length) % testimonials.length;
-      testimonials[index].classList.add('active');
+    function showTestimonial(index) {
+      testimonials.forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeTestimonial(direction) {
+      currentTestimonial += direction;
+      if (currentTestimonial < 0) currentTestimonial = testimonials.length - 1;
+      else if (currentTestimonial >= testimonials.length) currentTestimonial = 0;
+      showTestimonial(currentTestimonial);
     }
   </script>
 </body>
