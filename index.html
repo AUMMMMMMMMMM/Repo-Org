@@ -10,6 +10,9 @@
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="style.css" />
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -98,28 +101,37 @@
       </div>
     </section>
 
-    <!-- Testimonials Carousel -->
-    <section id="testimonials" class="testimonials" data-aos="fade-up">
-      <h2>What Our Customers Say</h2>
-      <div class="testimonial-carousel">
-        <div class="testimonial-item active" data-aos="fade-right">
-          <p>"Absolutely top-notch quality! The millets from Janaki Global are now a staple in my store. Highly recommend for any health-conscious customer base."</p>
-          <strong>– Priya, Organic Store Owner, London</strong>
+ <section id="testimonials" style="background-color: #f9f9f9; padding: 3rem 1rem;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 2rem;">What Our Customers Say</h2>
+    
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide testimonial-card">
+          <p>"The quality of millets and moringa from Janaki Global is unmatched. Highly recommended!"</p>
+          <strong>– Priya Deshmukh, Mumbai</strong>
         </div>
-        <div class="testimonial-item" data-aos="fade-left">
-          <p>"Fast delivery, great service, and authentic spices that remind me of home. Thank you, Janaki team!"</p>
-          <strong>– Ahmed, Chef & Restaurant Owner, Dubai</strong>
+
+        <div class="swiper-slide testimonial-card">
+          <p>"Timely delivery and premium spices. Our store shelves are never empty!"</p>
+          <strong>– Rakesh Patel, London</strong>
         </div>
-        <div class="testimonial-item" data-aos="fade-right">
-          <p>"Love the product variety. We imported Basmati rice and spices for our co-op and the feedback from members has been overwhelmingly positive."</p>
-          <strong>– Sarah, Food Co-op Manager, Canada</strong>
+
+        <div class="swiper-slide testimonial-card">
+          <p>"Loved the professional service and organic range. Janaki Global is now our go-to exporter."</p>
+          <strong>– Sarah Johnson, Dubai</strong>
         </div>
+
       </div>
-      <div class="carousel-controls">
-        <button id="prev-testimonial" aria-label="Previous testimonial">&#8592;</button>
-        <button id="next-testimonial" aria-label="Next testimonial">&#8594;</button>
-      </div>
-    </section>
+
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Founders Section -->
     <section id="founders" class="founders" data-aos="fade-up">
@@ -212,5 +224,8 @@
       }
     }
   </script>
+  <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 </html>
