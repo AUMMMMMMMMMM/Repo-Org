@@ -504,3 +504,49 @@ body {
   font-weight: 600;
 }
 
+
+#testimonials {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+}
+
+.testimonialSwiper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card strong {
+  font-weight: 600;
+  color: #444;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+}
+
