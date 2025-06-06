@@ -550,3 +550,10 @@ body {
   color: #333;
 }
 
+header.hero h1,
+header.hero p {
+  text-align: center;
+  font-weight: 700;
+}
+
+
