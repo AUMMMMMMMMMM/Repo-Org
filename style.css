@@ -1,48 +1,171 @@
-.products {
-  padding: 2rem 0;
+/* Reset and Base Styles */
+body {
+  background: white;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
-.products h2 {
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  color: #222;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #f0f8ff;
+  padding: 60px 20px;
   text-align: center;
-  margin-bottom: 2rem;
 }
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
+
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
-.product-card {
-  background: #fff;
-  border: 1px solid #ddd;
+
+.hero-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.hero-container p {
+  font-size: 1.25rem;
+  color: #444;
+}
+
+/* Section Styles */
+section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f9f9f9;
   border-radius: 12px;
+}
+
+section img {
+  max-width: 100px;
+  margin: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Newsletter */
+.newsletter input[type="email"] {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Testimonials */
+.testimonial {
+  margin-bottom: 1.5rem;
   padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s ease;
+  background: white;
+  border-left: 4px solid #007BFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+.testimonial p {
+  font-style: italic;
 }
-.product-card img {
-  max-width: 100%;
-  border-radius: 8px;
+
+.testimonial strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: #333;
 }
-.product-card h3 {
-  margin: 1rem 0 0.5rem;
-  color: #007BFF;
+
+/* Chat Widget */
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
 }
-.product-card p {
-  font-size: 0.9rem;
-  color: #555;
+
+.floating-chat {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
 }
-.quote-btn {
-  display: inline-block;
-  margin-top: 1rem;
+
+.floating-chat iframe {
+  flex-grow: 1;
+  border: none;
+  border-radius: 12px;
+}
+
+.floating-chat-header {
   background: #007BFF;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
-.quote-btn:hover {
-  background: #0056b3;
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-container h1 {
+    font-size: 2rem;
+  }
+
+  .hero-container p {
+    font-size: 1rem;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
 }
