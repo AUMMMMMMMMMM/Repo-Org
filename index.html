@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more.">
-  <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products">
+  <meta name="description" content="Janaki Global brings the best of India's natural and organic food products to global markets. Explore our wide range of millets, moringa, spices, and more." />
+  <meta name="keywords" content="Janaki Global, Millets, Moringa, Indian Spices, Export, Organic, Agro Products" />
   <title>Janaki Global</title>
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="style.css" />
@@ -12,6 +12,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
+    /* Basic Reset and Typography */
     body {
       background: white;
       color: black;
@@ -19,6 +20,8 @@
       margin: 0;
       padding: 0;
     }
+
+    /* Navigation Bar */
     nav {
       display: flex;
       justify-content: space-between;
@@ -26,17 +29,27 @@
       background: #6a1b9a;
       color: white;
       padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
       font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #d1c4e9;
     }
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
+      user-select: none;
     }
+
+    /* Hero Section */
     header.hero {
       background: linear-gradient(to right, #9c27b0, #6a1b9a);
       color: white;
@@ -47,6 +60,18 @@
       max-width: 960px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+    header.hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    header.hero p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Common Section Styling */
     .section {
       max-width: 960px;
       margin: 2rem auto;
@@ -55,13 +80,33 @@
     .section h2 {
       color: #6a1b9a;
       margin-bottom: 1rem;
+      font-weight: 600;
+      border-bottom: 2px solid #6a1b9a;
+      padding-bottom: 0.3rem;
     }
+
+    /* About Section */
+    #about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Founders Section */
     .founders a {
       display: block;
       margin-bottom: 0.5rem;
       color: #6a1b9a;
       font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
+    .founders a:hover {
+      color: #9c27b0;
+      text-decoration: underline;
+    }
+
+    /* Products Grid */
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -88,9 +133,11 @@
       max-height: 180px;
       object-fit: cover;
       border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
     .product-card h3 {
       margin-top: 1rem;
+      font-weight: 700;
     }
     .product-card a {
       display: inline-block;
@@ -101,11 +148,19 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: 600;
+      transition: background-color 0.3s ease;
     }
+    .product-card a:hover {
+      background-color: #9c27b0;
+    }
+
+    /* Fade In Animation */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Testimonials */
     .testimonials {
       margin: 3rem auto;
       max-width: 800px;
@@ -115,11 +170,15 @@
       border-radius: 12px;
       color: white;
       animation: fadeIn 2s ease-in;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
     .testimonial {
       display: none;
       text-align: center;
       font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      min-height: 90px;
     }
     .testimonial.active {
       display: block;
@@ -135,7 +194,7 @@
     .testimonial-nav {
       display: flex;
       justify-content: space-between;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
     .testimonial-nav button {
       background: white;
@@ -146,83 +205,108 @@
       cursor: pointer;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      user-select: none;
     }
     .testimonial-nav button:hover {
       background-color: #d1c4e9;
     }
+
+    /* Footer */
+    footer.section {
+      text-align: center;
+      color: #6a1b9a;
+      padding: 1.5rem 0;
+      font-weight: 600;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header.hero h1 {
+        font-size: 1.8rem;
+      }
+      .product-card img {
+        max-height: 140px;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <div>
       <a href="#about">About</a>
       <a href="#products">Products</a>
     </div>
-    <div class="logo">Janaki Global</div>
+    <div class="logo" aria-label="Janaki Global Logo">Janaki Global</div>
     <div>
       <a href="#founders">Founders</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero" data-aos="fade-down">
     <h1>Welcome to Janaki Global</h1>
     <p>Exporting the richness of India to the world. Explore our organic and sustainable range.</p>
   </header>
 
+  <!-- About Section -->
   <section id="about" class="section" data-aos="fade-up">
     <h2>About Us</h2>
     <p>Janaki Global is committed to delivering premium-quality Indian agro products to customers around the world. We specialize in millets, moringa, spices, and more — all sourced from trusted farmers and processed with care.</p>
   </section>
 
-  <section id="products" class="product-grid" data-aos="fade-up">
+  <!-- Products Section -->
+  <section id="products" class="product-grid" data-aos="fade-up" aria-label="Products offered by Janaki Global">
     <div class="product-card" data-aos="zoom-in">
       <img src="images/products/millets.jpg" alt="Millets" />
-      <h3><a href="millets.html">Millets</a></h3>
-      <a href="get-quote.html">Get Quote</a>
+      <h3><a href="millets.html" aria-label="Millets Product Page">Millets</a></h3>
+      <a href="get-quote.html" aria-label="Get Quote for Millets">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
       <img src="images/products/moringa.jpg" alt="Moringa" />
-      <h3><a href="moringa.html">Moringa</a></h3>
-      <a href="get-quote.html">Get Quote</a>
+      <h3><a href="moringa.html" aria-label="Moringa Product Page">Moringa</a></h3>
+      <a href="get-quote.html" aria-label="Get Quote for Moringa">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
-      <img src="images/products/spices.jpg" alt="Spices & Masalas" />
-      <h3><a href="spices.html">Spices & Masalas</a></h3>
-      <a href="get-quote.html">Get Quote</a>
+      <img src="images/products/spices.jpg" alt="Spices and Masalas" />
+      <h3><a href="spices.html" aria-label="Spices and Masalas Product Page">Spices & Masalas</a></h3>
+      <a href="get-quote.html" aria-label="Get Quote for Spices and Masalas">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
       <img src="images/products/pickles.jpg" alt="Pickles" />
-      <h3><a href="pickles.html">Pickles</a></h3>
-      <a href="get-quote.html">Get Quote</a>
+      <h3><a href="pickles.html" aria-label="Pickles Product Page">Pickles</a></h3>
+      <a href="get-quote.html" aria-label="Get Quote for Pickles">Get Quote</a>
     </div>
     <div class="product-card" data-aos="zoom-in">
       <img src="images/products/basmati.jpg" alt="Basmati Rice" />
-      <h3><a href="basmati.html">Basmati Rice</a></h3>
-      <a href="get-quote.html">Get Quote</a>
+      <h3><a href="basmati.html" aria-label="Basmati Rice Product Page">Basmati Rice</a></h3>
+      <a href="get-quote.html" aria-label="Get Quote for Basmati Rice">Get Quote</a>
     </div>
   </section>
 
-  <section class="testimonials" data-aos="fade-up">
-    <div class="testimonial active">
+  <!-- Testimonials Section -->
+  <section class="testimonials" data-aos="fade-up" aria-label="Customer Testimonials">
+    <div class="testimonial active" role="article" aria-live="polite">
       <p>“Amazing quality and prompt service. Highly recommended!”</p>
       <strong>- A Happy Client</strong>
     </div>
-    <div class="testimonial">
+    <div class="testimonial" role="article" aria-live="polite">
       <p>“Their organic range is the best we've ever imported. Great job Janaki Global!”</p>
       <strong>- Export Partner</strong>
     </div>
-    <div class="testimonial">
+    <div class="testimonial" role="article" aria-live="polite">
       <p>“Excellent customer support and unbeatable quality.”</p>
       <strong>- Buyer from UK</strong>
     </div>
-    <div class="testimonial-nav">
-      <button onclick="changeTestimonial(-1)">&#8592; Prev</button>
-      <button onclick="changeTestimonial(1)">Next &#8594;</button>
+    <div class="testimonial-nav" role="navigation" aria-label="Testimonial navigation">
+      <button onclick="changeTestimonial(-1)" aria-label="Previous Testimonial">&#8592; Prev</button>
+      <button onclick="changeTestimonial(1)" aria-label="Next Testimonial">Next &#8594;</button>
     </div>
   </section>
 
-  <section id="founders" class="section founders" data-aos="fade-up">
+  <!-- Founders Section -->
+  <section id="founders" class="section founders" data-aos="fade-up" aria-label="Our Founders">
     <h2>Our Founders</h2>
     <a href="https://www.linkedin.com/in/sandeepabojwar" target="_blank" rel="noopener noreferrer">Sandeep Abojwar</a>
     <a href="https://www.linkedin.com/in/nehaabojwar" target="_blank" rel="noopener noreferrer">Neha Abojwar</a>
@@ -230,16 +314,19 @@
     <a href="https://www.linkedin.com/in/gauriabojwar" target="_blank" rel="noopener noreferrer">Gauri Abojwar</a>
   </section>
 
-  <section id="contact" class="section" data-aos="fade-up">
+  <!-- Contact Section -->
+  <section id="contact" class="section" data-aos="fade-up" aria-label="Contact Janaki Global">
     <h2>Contact Us</h2>
-    <p>Email: contact@janakiglobal.com</p>
-    <p>Phone: +91-1234567890</p>
+    <p>Email: <a href="mailto:contact@janakiglobal.com">contact@janakiglobal.com</a></p>
+    <p>Phone: <a href="tel:+911234567890">+91-1234567890</a></p>
   </section>
 
-  <footer class="section" style="text-align:center; color:#6a1b9a;">
+  <!-- Footer -->
+  <footer class="section" aria-label="Footer">
     &copy; 2025 Janaki Global. All rights reserved.
   </footer>
 
+  <!-- Scripts -->
   <script>
     AOS.init();
 
