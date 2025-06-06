@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote | Janaki Global</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+    }
+    .quote-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .quote-container h1 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .quote-container form {
+      display: flex;
+      flex-direction: column;
+    }
+    .quote-container label {
+      margin: 0.5rem 0 0.25rem;
+    }
+    .quote-container input, .quote-container select, .quote-container textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .quote-container button {
+      padding: 0.75rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .quote-container button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-container">
+    <h1>Request a Quote</h1>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="product">Select Product</label>
+      <select id="product" name="product">
+        <option value="Moringa">Moringa</option>
+        <option value="Millets">Millets</option>
+        <option value="Spices and Masalas">Spices and Masalas</option>
+        <option value="Pickles">Pickles</option>
+        <option value="Basmati Rice">Basmati Rice</option>
+      </select>
+
+      <label for="quantity">Required Quantity (e.g. 500kg, 1000 packs)</label>
+      <input type="text" id="quantity" name="quantity" required />
+
+      <label for="message">Additional Details</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</body>
+</html>
