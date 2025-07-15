@@ -1,133 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Janaki Global</title>
-  <!-- Bootstrap & Font Awesome -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-  <!-- Header -->
-  <header class="bg-dark text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="h4 mb-0">Janaki Global</h1>
+  <header class="bg-success text-white p-3">
+    <div class="container d-flex justify-content-between">
+      <h1 class="h4">Janaki Global</h1>
       <nav>
-        <a href="index.html" class="text-white me-3">Home</a>
-        <a href="products.html" class="text-white me-3">Products</a>
-        <a href="#about" class="text-white">About Us</a>
+        <a href="products.html" class="text-white">Our Products</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="py-5 text-center bg-light">
+  <main class="text-center py-5">
     <div class="container">
-      <h2>Global Supplier of Quality Goods</h2>
-      <p class="lead">Connecting buyers & trusted manufacturers worldwide.</p>
-      <a href="products.html" class="btn btn-primary btn-lg">Browse Products</a>
+      <h2>Welcome to Janaki Global</h2>
+      <p>Your trusted source for organic exports like millets, moringa, and spices.</p>
+      <a href="products.html" class="btn btn-primary">Explore Products</a>
     </div>
-  </section>
-
-  <!-- Search -->
-  <section class="py-4">
-    <div class="container">
-      <form id="searchForm" class="row g-2">
-        <div class="col-md-8">
-          <input type="text" id="searchQuery" class="form-control" placeholder="Search products..." />
-        </div>
-        <div class="col-md-4 text-end">
-          <button type="submit" class="btn btn-primary">Search</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Featured Products -->
-  <section class="py-5 bg-white">
-    <div class="container">
-      <h3 class="mb-4">Featured Products</h3>
-      <div class="row" id="featuredGrid">
-        <!-- Populated via JS -->
-      </div>
-      <div class="text-center mt-3">
-        <a href="products.html" class="btn btn-outline-primary">View All Products</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Us -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container">
-      <h3>About Janaki Global</h3>
-      <p>
-        Janaki Global is a trusted B2B supplier and exporter of quality agricultural and organic products including millets, spices, moringa, and herbs. Our mission is to connect ethical producers with global buyers ensuring traceability, quality, and timely delivery.
-      </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p>© 2025 Janaki Global. All Rights Reserved.</p>
-      <p>
-        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom JS: Load Products & Search -->
-  <script>
-    const sampleProducts = [
-      { name: "Organic Moringa Powder", img: "https://via.placeholder.com/300", desc: "100% natural moringa leaf powder.", link: "products.html#moringa" },
-      { name: "Finger Millet (Ragi)", img: "https://via.placeholder.com/300", desc: "Wholesome and gluten-free grain.", link: "products.html#ragi" },
-      { name: "Turmeric Powder", img: "https://via.placeholder.com/300", desc: "Fresh and pure turmeric powder.", link: "products.html#turmeric" },
-      { name: "Dry Ginger Slices", img: "https://via.placeholder.com/300", desc: "Premium quality sun-dried ginger.", link: "products.html#ginger" }
-    ];
-
-    $(document).ready(function(){
-      const $grid = $("#featuredGrid");
-      sampleProducts.forEach(p => {
-        $grid.append(`
-          <div class="col-md-3 mb-4">
-            <div class="card h-100">
-              <img src="${p.img}" class="card-img-top" alt="${p.name}">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">${p.name}</h5>
-                <p class="card-text">${p.desc}</p>
-                <a href="${p.link}" class="btn btn-sm btn-primary mt-auto">View Details</a>
-              </div>
-            </div>
-          </div>
-        `);
-      });
-    });
-
-    $("#searchForm").on("submit", function(e){
-      e.preventDefault();
-      const q = $("#searchQuery").val().toLowerCase();
-      window.location = `products.html?search=${encodeURIComponent(q)}`;
-    });
-  </script>
+  </main>
 
   <!-- Live Chat (Tawk.to) -->
   <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/your_property_id_here/1hthabcd';  // Replace with actual property ID
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
