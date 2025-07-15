@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janaki Global – Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h4 mb-0">Janaki Global</h1>
+      <nav>
+        <a href="index.html" class="text-white me-3">Home</a>
+        <a href="products.html" class="text-white me-3">Products</a>
+        <a href="index.html#about" class="text-white">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="py-4 text-center bg-light">
+    <div class="container">
+      <h2>Our Product Range</h2>
+      <p class="lead">Explore our premium products and request a quote</p>
+    </div>
+  </section>
+
+  <!-- Filter & Search -->
+  <section class="py-3">
+    <div class="container">
+      <form id="filterForm" class="row g-3">
+        <div class="col-md-6">
+          <input type="text" id="filterQuery" class="form-control" placeholder="Search products..." />
+        </div>
+        <div class="col-md-6 text-end">
+          <button type="submit" class="btn btn-primary">Filter</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row" id="productsGrid">
+        <!-- JS-generated product cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Modal -->
+  <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form id="quoteForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="modalProductName" name="productName" />
+          <div class="mb-3">
+            <label class="form-label">Product</label>
+            <input type="text" id="displayProduct" class="form-control" readonly />
+          </div>
+          <div class="mb-3">
+            <label for="buyerName" class="form-label">Your Name</label>
+            <input required type="text" id="buyerName" name="buyerName" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="buyerEmail" class="form-label">Your Email</label>
+            <input required type="email" id="buyerEmail" name="buyerEmail" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="buyerMessage" class="form-label">Message / Inquiry</label>
+            <textarea required id="buyerMessage" name="buyerMessage" class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Send Request</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS: Populate and Filter Products -->
+  <script>
+    const products = [
+      { id: 'moringa', name: "Organic Moringa Powder", img: "https://via.placeholder.com/300", desc: "100% natural moringa leaf powder." },
+      { id: 'ragi', name: "Finger Millet (Ragi)", img: "https://via.placeholder.com/300", desc: "Wholesome and gluten‑free grain." },
+      { id: 'turmeric', name: "Turmeric Powder", img: "https://via.placeholder.com/300", desc: "Fresh and pure turmeric powder." },
+      { id: 'ginger', name: "Dry Ginger Slices", img: "https://via.placeholder.com/300", desc: "Premium quality sun‑dried ginger." }
+    ];
+
+    function renderProducts(list) {
+      const $grid = $('#productsGrid');
+      $grid.empty();
+      list.forEach(p => {
+        $grid.append(`
+          <div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <img src="${p.img}" alt="${p.name}" class="card-img-top" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${p.name}</h5>
+                <p class="card-text">${p.desc}</p>
+                <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="${p.name}">Request Quote</button>
+              </div>
+            </div>
+          </div>
+        `);
+      });
+
+      $('.request-quote-btn').on('click', function() {
+        const name = $(this).data('name');
+        $('#modalProductName').val(name);
+        $('#displayProduct').val(name);
+        new bootstrap.Modal(document.getElementById('quoteModal')).show();
+      });
+    }
+
+    $(document).ready(function() {
+      renderProducts(products);
+
+      $('#filterForm').on('submit', function(e){
+        e.preventDefault();
+        const q = $('#filterQuery').val().toLowerCase();
+        const filtered = products.filter(p => p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q));
+        renderProducts(filtered);
+      });
+
+      $('#quoteForm').on('submit', function(e){
+        e.preventDefault();
+        // implement form submission via AJAX or email API
+        alert('Quote request sent for ' + $('#modalProductName').val());
+        $('#quoteModal').modal('hide');
+      });
+    });
+  </script>
+</body>
+</html>
