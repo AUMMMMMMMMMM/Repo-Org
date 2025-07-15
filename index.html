@@ -8,12 +8,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body { font-family: Arial, sans-serif; }
+
     .hero-section {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1600x600') center/cover;
       color: white;
       text-align: center;
       padding: 5rem 1rem;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
     }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: rotateImages 15s infinite;
+      z-index: -1;
+    }
+    @keyframes rotateImages {
+      0%   { background-image: url('images/products/brown-basmati.jpg'); }
+      33%  { background-image: url('images/products/chilli.jpg'); }
+      66%  { background-image: url('images/products/garammasala.jpg'); }
+      100% { background-image: url('images/products/cinnamon.jpg'); }
+    }
+
     .card img {
       max-height: 200px;
       object-fit: cover;
@@ -47,14 +66,10 @@
   </header>
 
   <section class="hero-section">
+    <div class="hero-bg"></div>
     <div class="container">
       <h2 class="display-5 fw-bold">Premium Agro Products for the World</h2>
       <p class="lead">Connecting Indian Farmers to Global Markets – Millets, Moringa, Spices & More</p>
-      <div class="action-buttons mt-4">
-        <a href="products.html" class="btn btn-light">Request a Quote</a>
-        <a href="https://wa.me/919975850195" target="_blank" class="btn btn-light"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="tel:+919975850195" class="btn btn-light"><i class="fas fa-phone-alt"></i> Call Us</a>
-      </div>
     </div>
   </section>
 
@@ -69,8 +84,8 @@
             <h5 class="card-title"><a href="millets.html">Millets</a></h5>
             <div class="action-buttons">
               <a href="quote.html?product=millets" class="btn btn-success btn-sm">Request Quote</a>
-              <a href="tel:+919975850195" class="btn btn-primary btn-sm">Call</a>
-              <a href="https://wa.me/919975850195?text=I%20am%20interested%20in%20Millets" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
+              <a href="tel:+919890061580" class="btn btn-success btn-sm">Call</a>
+              <a href="https://wa.me/919890061580?text=I%20am%20interested%20in%20Millets" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
             </div>
           </div>
         </div>
@@ -84,8 +99,8 @@
             <h5 class="card-title"><a href="moringa.html">Moringa</a></h5>
             <div class="action-buttons">
               <a href="quote.html?product=moringa" class="btn btn-success btn-sm">Request Quote</a>
-              <a href="tel:+919975850195" class="btn btn-primary btn-sm">Call</a>
-              <a href="https://wa.me/919975850195?text=I%20am%20interested%20in%20Moringa" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
+              <a href="tel:+919890061580" class="btn btn-success btn-sm">Call</a>
+              <a href="https://wa.me/919890061580?text=I%20am%20interested%20in%20Moringa" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
             </div>
           </div>
         </div>
@@ -99,8 +114,8 @@
             <h5 class="card-title"><a href="spices.html">Spices</a></h5>
             <div class="action-buttons">
               <a href="quote.html?product=spices" class="btn btn-success btn-sm">Request Quote</a>
-              <a href="tel:+919975850195" class="btn btn-primary btn-sm">Call</a>
-              <a href="https://wa.me/919975850195?text=I%20am%20interested%20in%20Spices" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
+              <a href="tel:+919890061580" class="btn btn-success btn-sm">Call</a>
+              <a href="https://wa.me/919890061580?text=I%20am%20interested%20in%20Spices" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
             </div>
           </div>
         </div>
@@ -114,8 +129,8 @@
             <h5 class="card-title"><a href="rice.html">Rice</a></h5>
             <div class="action-buttons">
               <a href="quote.html?product=rice" class="btn btn-success btn-sm">Request Quote</a>
-              <a href="tel:+919975850195" class="btn btn-primary btn-sm">Call</a>
-              <a href="https://wa.me/919975850195?text=I%20am%20interested%20in%20Rice" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
+              <a href="tel:+919890061580" class="btn btn-success btn-sm">Call</a>
+              <a href="https://wa.me/919890061580?text=I%20am%20interested%20in%20Rice" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
             </div>
           </div>
         </div>
@@ -129,8 +144,8 @@
             <h5 class="card-title"><a href="pickles.html">Pickles</a></h5>
             <div class="action-buttons">
               <a href="quote.html?product=pickles" class="btn btn-success btn-sm">Request Quote</a>
-              <a href="tel:+919975850195" class="btn btn-primary btn-sm">Call</a>
-              <a href="https://wa.me/919975850195?text=I%20am%20interested%20in%20Pickles" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
+              <a href="tel:+919890061580" class="btn btn-success btn-sm">Call</a>
+              <a href="https://wa.me/919890061580?text=I%20am%20interested%20in%20Pickles" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
             </div>
           </div>
         </div>
