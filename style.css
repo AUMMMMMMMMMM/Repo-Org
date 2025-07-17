@@ -6,7 +6,7 @@
   font-family: 'Inter', sans-serif;
 }
 body {
-  background: #fafafa;
+  background: #b388eb;
   color: #333;
   line-height: 1.6;
   min-height: 100vh;
@@ -23,7 +23,7 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: #2b6a4d;
+  background: #b388eb;
   padding: 1rem 0;
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -63,7 +63,7 @@ body {
   min-height: 450px;
   display: flex;
   align-items: center;
-  color: #e9f3e9;
+  color: #b388eb;
   text-align: center;
   padding: 2rem 1rem;
   position: relative;
