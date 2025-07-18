@@ -2,20 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galentra Exports – Products</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galentra Exports – Trusted B2B Export Partner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    .hero-section {
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: rotateImages 15s infinite;
+      z-index: -1;
+    }
+    @keyframes rotateImages {
+      0%   { background-image: url('images/products/bg.jpg'); }
+      33%  { background-image: url('images/products/chilli.jpg'); }
+      66%  { background-image: url('images/products/garammasala.jpg'); }
+      100%  { background-image: url('images/products/spices.jpg'); }
+    }
+
+    .card img {
+      max-height: 500px;
+      object-fit: cover;
+    }
+    .card-title a {
+      text-decoration: none;
+      color: #212529;
+    }
+    .card-title a:hover {
+      color: #28a745;
+    }
+    .action-buttons .btn {
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="bg-dark text-white py-3">
+  <header class="bg-success text-white p-3 sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="h4 mb-0">Galentra Exports</h1>
+    <div style="display: flex; align-items: left;">
+    <video autoplay loop muted playsinline width="100">
+  <source src="images/products/logo-Photoroom.jpg" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+      <h1 class="h4">Galentra Exports</h1>
+    </div>
+
+      
+     
       <nav>
         <a href="index.html" class="text-white me-3">Home</a>
-        <a href="products.html" class="text-white me-3">Products</a>
-        <a href="index.html#about" class="text-white">About Us</a>
+        <a href="products.html" class="text-white me-3">Our Products</a>
+        <a href="about.html" class="text-white me-3">About</a>
+        <a href="contact.html" class="text-white me-3">Contact</a>
+        <a href="login.html" class="text-white me-3">Login</a>
+        <a href="signup.html" class="text-white">Signup</a>
       </nav>
     </div>
   </header>
