@@ -1,202 +1,420 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galentra Exports – Trusted B2B Export Partner</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    body { font-family: Arial, sans-serif; }
 
-    .hero-section {
-      color: white;
-      text-align: center;
-      padding: 5rem 1rem;
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-size: cover;
-      background-position: center;
-      animation: rotateImages 15s infinite;
-      z-index: -1;
-    }
-    @keyframes rotateImages {
-      0%   { background-image: url('images/products/bg.jpg'); }
-      33%  { background-image: url('images/products/chilli.jpg'); }
-      66%  { background-image: url('images/products/garammasala.jpg'); }
-      100%  { background-image: url('images/products/spices.jpg'); }
-    }
-
-    .card img {
-      max-height: 500px;
-      object-fit: cover;
-    }
-    .card-title a {
-      text-decoration: none;
-      color: #212529;
-    }
-    .card-title a:hover {
-      color: #28a745;
-    }
-    .action-buttons .btn {
-      margin-right: 0.3rem;
-      margin-bottom: 0.3rem;
-    }
-  </style>
-</head>
-<body>
-  <header class="bg-success text-white p-3 sticky-top">
-    <div class="container d-flex justify-content-between align-items-center">
-    <div style="display: flex; align-items: left;">
-    <video autoplay loop muted playsinline width="100">
-  <source src="images/products/logo-Photoroom.jpg" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-      <h1 class="h4">Galentra Exports</h1>
-    </div>
-
-      
-     
-      <nav>
-        <a href="index.html" class="text-white me-3">Home</a>
-        <a href="products.html" class="text-white me-3">Our Products</a>
-        <a href="about.html" class="text-white me-3">About</a>
-        <a href="contact.html" class="text-white me-3">Contact</a>
-        <a href="login.html" class="text-white me-3">Login</a>
-        <a href="signup.html" class="text-white">Signup</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Page Title -->
-  <section class="py-4 text-center bg-light">
-    <div class="container">
-      <h2>Our Product Range</h2>
-      <p class="lead">Explore our premium products and request a quote</p>
-    </div>
-  </section>
-
-  <!-- Filter & Search -->
-  <section class="py-3">
-    <div class="container">
-      <form id="filterForm" class="row g-3">
-        <div class="col-md-6">
-          <input type="text" id="filterQuery" class="form-control" placeholder="Search products..." />
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/ashwagandha.jpg" alt="Ashwagandha" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Ashwagandha</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Ashwagandha">Request Quote</button>
         </div>
-        <div class="col-md-6 text-end">
-          <button type="submit" class="btn btn-primary">Filter</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Products Grid -->
-  <section class="py-4">
-    <div class="container">
-      <div class="row" id="productsGrid">
-        <!-- JS-generated product cards -->
       </div>
     </div>
-  </section>
+    
 
-  <!-- Quote Modal -->
-  <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <form id="quoteForm" class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/psyllium.jpg" alt="Psyllium Seeds" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Psyllium Seeds</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Psyllium Seeds">Request Quote</button>
         </div>
-        <div class="modal-body">
-          <input type="hidden" id="modalProductName" name="productName" />
-          <div class="mb-3">
-            <label class="form-label">Product</label>
-            <input type="text" id="displayProduct" class="form-control" readonly />
-          </div>
-          <div class="mb-3">
-            <label for="buyerName" class="form-label">Your Name</label>
-            <input required type="text" id="buyerName" name="buyerName" class="form-control" />
-          </div>
-          <div class="mb-3">
-            <label for="buyerEmail" class="form-label">Your Email</label>
-            <input required type="email" id="buyerEmail" name="buyerEmail" class="form-control" />
-          </div>
-          <div class="mb-3">
-            <label for="buyerMessage" class="form-label">Message / Inquiry</label>
-            <textarea required id="buyerMessage" name="buyerMessage" class="form-control" rows="3"></textarea>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Send Request</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
+    
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/shatavari.jpg" alt="Shatavari" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Shatavari</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Shatavari">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
 
-  <!-- JS: Populate and Filter Products -->
-  <script>
-    const products = [
-      { id: 'moringa', name: "Organic Moringa Powder", img: images/products/moringa.jpg, desc: "100% natural moringa leaf powder." },
-      { id: 'ragi', name: "Finger Millet (Ragi)", img: "images/products/ragi.jpg", desc: "Wholesome and gluten‑free grain." },
-      { id: 'turmeric', name: "Turmeric Powder", img: "images/products/turmaric.jpg", desc: "Fresh and pure turmeric powder." },
-      { id: 'ginger', name: "Dry Ginger Slices", img: "images/products/ginger.jpg", desc: "Premium quality sun‑dried ginger." }
-    ];
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/henna.jpg" alt="Henna Leaves" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Henna Leaves</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Henna Leaves">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
 
-    function renderProducts(list) {
-      const $grid = $('#productsGrid');
-      $grid.empty();
-      list.forEach(p => {
-        $grid.append(`
-          <div class="col-md-3 mb-4">
-            <div class="card h-100">
-              <img src="${p.img}" alt="${p.name}" class="card-img-top" />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">${p.name}</h5>
-                <p class="card-text">${p.desc}</p>
-                <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="${p.name}">Request Quote</button>
-              </div>
-            </div>
-          </div>
-        `);
-      });
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/mulethi.jpg" alt="Mulethi" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Mulethi</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Mulethi">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
 
-      $('.request-quote-btn').on('click', function() {
-        const name = $(this).data('name');
-        $('#modalProductName').val(name);
-        $('#displayProduct').val(name);
-        new bootstrap.Modal(document.getElementById('quoteModal')).show();
-      });
-    }
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/butterfly-pea.jpg" alt="Butterfly Pea Petals" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Butterfly Pea Petals</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Butterfly Pea Petals">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
 
-    $(document).ready(function() {
-      renderProducts(products);
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/chamomile.jpg" alt="Chamomile" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Chamomile</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Chamomile">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
 
-      $('#filterForm').on('submit', function(e){
-        e.preventDefault();
-        const q = $('#filterQuery').val().toLowerCase();
-        const filtered = products.filter(p => p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q));
-        renderProducts(filtered);
-      });
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/hibiscus.jpg" alt="Hibiscus Petals" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Hibiscus Petals</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Hibiscus Petals">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
 
-      $('#quoteForm').on('submit', function(e){
-        e.preventDefault();
-        // implement form submission via AJAX or email API
-        alert('Quote request sent for ' + $('#modalProductName').val());
-        $('#quoteModal').modal('hide');
-      });
-    });
-  </script>
-</body>
-</html>
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/cornflower.jpg" alt="Blue Cornflower" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Blue Cornflower</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Blue Cornflower">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/rose.jpg" alt="Red Rose Petals" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Red Rose Petals</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Red Rose Petals">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/fenugreek.jpg" alt="Fenugreek" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Fenugreek</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Fenugreek">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/coriander.jpg" alt="Coriander Seeds" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Coriander Seeds</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Coriander Seeds">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/cumin.jpg" alt="Cumin Seeds" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Cumin Seeds</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Cumin Seeds">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/fennel.jpg" alt="Fennel Seeds" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Fennel Seeds</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Fennel Seeds">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/chia.jpg" alt="Chia Seeds" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Chia Seeds</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Chia Seeds">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/green-peas.jpg" alt="Green Peas" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Green Peas</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Green Peas">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/yellow-peas.jpg" alt="Yellow Peas" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Yellow Peas</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Yellow Peas">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/chickpeas.jpg" alt="Chickpeas" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Chickpeas</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Chickpeas">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/bengal-gram.jpg" alt="Bengal Gram Whole" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Bengal Gram Whole</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Bengal Gram Whole">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/urad-dal.jpg" alt="Urad Dal" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Urad Dal</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Urad Dal">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/soyabean.jpg" alt="Soyabean" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Soyabean</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Soyabean">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/peanuts.jpg" alt="Peanuts" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Peanuts</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Peanuts">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/white-sesame.jpg" alt="White Sesame" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">White Sesame</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="White Sesame">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/black-sesame.jpg" alt="Black Sesame" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Black Sesame</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Black Sesame">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/black-cumin.jpg" alt="Black Cumin Seeds" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Black Cumin Seeds</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Black Cumin Seeds">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/turmeric-powder.jpg" alt="Turmeric Powder" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Turmeric Powder</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Turmeric Powder">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/coriander-powder.jpg" alt="Coriander Powder" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Coriander Powder</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Coriander Powder">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/psyllium-powder.jpg" alt="Psyllium Husk Powder" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Psyllium Husk Powder</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Psyllium Husk Powder">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/ashwagandha-powder.jpg" alt="Ashwagandha Powder" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Ashwagandha Powder</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Ashwagandha Powder">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/moringa-powder.jpg" alt="Moringa Powder" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Moringa Powder</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Moringa Powder">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/ashwagandha-extract.jpg" alt="Ashwagandha Extract" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Ashwagandha Extract</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Ashwagandha Extract">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/lemongrass-extract.jpg" alt="Lemon Grass Extract" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Lemon Grass Extract</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Lemon Grass Extract">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/amla-extract.jpg" alt="Amla Extract" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Amla Extract</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Amla Extract">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/fenugreek-extract.jpg" alt="Fenugreek Extract" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Fenugreek Extract</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Fenugreek Extract">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="images/products/basil-extract.jpg" alt="Basil Leaves Extract" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Basil Leaves Extract</h5>
+          <p class="card-text">Premium quality export product.</p>
+          <button class="btn btn-sm btn-primary mt-auto request-quote-btn" data-name="Basil Leaves Extract">Request Quote</button>
+        </div>
+      </div>
+    </div>
+    
